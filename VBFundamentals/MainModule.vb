@@ -1,18 +1,21 @@
 ﻿Option Strict On
 
+
 Module MainModule
 
 
     Dim ProductID As Integer = 1
-    Dim isActive As Boolean = True
     Dim Name As String = "10 Speed Bike"
     Dim SellStartDate As DateTime = #1/1/2019#
 
 
-    Private Const DEFAULT_ACTIVE As Boolean = True
-    Private Const DEFAULT_LIST_PRICE As Decimal = 999.99D
-
     Sub Main()
+
+        Dim isActive As Boolean = ClassConstants.DEFAULT_ACTIVE
+        Dim ListPrice As Decimal = ClassConstants.DEFAULT_LIST_PRICE
+
+
+
 
         Dim theData As Object
 
