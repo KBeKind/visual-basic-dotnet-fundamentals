@@ -54,12 +54,12 @@ AdventureWorks
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="T:AdventureWorks.CustomerDetailControl">
+<member name="T:AdventureWorks.CustomerListControl">
 <summary>
-CustomerDetailControl
+CustomerListControl
 </summary>
 </member>
-<member name="M:AdventureWorks.CustomerDetailControl.InitializeComponent">
+<member name="M:AdventureWorks.CustomerListControl.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>
@@ -70,6 +70,16 @@ ProductDetailControl
 </summary>
 </member>
 <member name="M:AdventureWorks.ProductDetailControl.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="T:AdventureWorks.ProductListControl">
+<summary>
+ProductListControl
+</summary>
+</member>
+<member name="M:AdventureWorks.ProductListControl.InitializeComponent">
 <summary>
 InitializeComponent
 </summary>
@@ -87,6 +97,16 @@ InitializeComponent
 <member name="M:AdventureWorks.Application.Main">
 <summary>
 Application Entry Point.
+</summary>
+</member>
+<member name="T:AdventureWorks.CustomerDetailControl">
+<summary>
+CustomerDetailControl
+</summary>
+</member>
+<member name="M:AdventureWorks.CustomerDetailControl.InitializeComponent">
+<summary>
+InitializeComponent
 </summary>
 </member>
 <member name="T:AdventureWorks.MainWindow">

@@ -1,29 +1,36 @@
-﻿Public Class CommonBase
+﻿Imports System.ComponentModel
+Imports System.Text
 
-    Sub New()
-        IsActive = True
-        ModifiedDate = DateTime.Now
-        CreatedBy = Environment.UserName
-    End Sub
+Public Class CommonBase
+  Implements INotifyPropertyChanged
 
-    Public Property IsActive As Boolean
-    Public Property ModifiedDate As DateTime
-    Public Property CreatedBy As String
+  Sub New()
+    IsActive = True
+    ModifiedDate = DateTime.Now
+    CreatedBy = Environment.UserName
+  End Sub
 
+  Public Property IsActive As Boolean
+  Public Property ModifiedDate As DateTime
+  Public Property CreatedBy As String
 
-    Protected Overridable Function GetClassData() As String
+  Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
-        Dim sb As New Text.StringBuilder(1024)
-        sb.AppendLine("Is Active: " + IsActive.ToString())
-        sb.AppendLine("Modified Date: " + ModifiedDate.ToLongDateString)
-        sb.AppendLine("Created By: " + CreatedBy)
+  Sub RaisePropertyChanged(ByVal propertyName As String)
+    RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+  End Sub
 
-        Return sb.ToString()
+  Public Overrides Function ToString() As String
+    Return GetClassData()
+  End Function
 
-    End Function
+  Protected Overridable Function GetClassData() As String
+    Dim sb As New StringBuilder(1024)
 
-    Public Overrides Function ToString() As String
-        Return GetClassData()
-    End Function
+    sb.AppendLine("Is Active: " + IsActive.ToString())
+    sb.AppendLine("Modified Date: " + ModifiedDate.ToLongDateString())
+    sb.AppendLine("Created By: " + CreatedBy)
 
+    Return sb.ToString()
+  End Function
 End Class

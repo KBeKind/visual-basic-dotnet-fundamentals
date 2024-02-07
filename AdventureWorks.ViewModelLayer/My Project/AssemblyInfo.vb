@@ -12,13 +12,13 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("AdventureWorks.ViewModelLayer")>
-<Assembly: AssemblyCopyright("Copyright ©  2024")>
+<Assembly: AssemblyCopyright("Copyright ©  2019")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("182f4133-ab7a-4734-86f7-cfe72969bc6f")>
+<Assembly: Guid("2195f61e-f302-4518-a274-bee55d55dec0")>
 
 ' Version information for an assembly consists of the following four values:
 '

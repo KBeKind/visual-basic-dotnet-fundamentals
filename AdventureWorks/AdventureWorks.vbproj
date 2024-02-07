@@ -3,15 +3,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEC56C4C-723C-492E-BAB6-359FDF13FE2B}</ProjectGuid>
+    <ProjectGuid>{0C9A6D23-189A-4B45-B432-3A35B2A829B6}</ProjectGuid>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AdventureWorks</RootNamespace>
     <AssemblyName>AdventureWorks</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,7 +23,8 @@
     <IncrementalBuild>true</IncrementalBuild>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>AdventureWorks.xml</DocumentationFile>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <NoWarn>42314</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,7 +36,8 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>AdventureWorks.xml</DocumentationFile>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <NoWarn>42314</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -68,13 +71,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CustomerControls\CustomerDetailControl.xaml.vb">
-      <DependentUpon>CustomerDetailControl.xaml</DependentUpon>
+    <Compile Include="CustomerControls\CustomerListControl.xaml.vb">
+      <DependentUpon>CustomerListControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProductControls\ProductDetailControl.xaml.vb">
       <DependentUpon>ProductDetailControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProductControls\ProductListControl.xaml.vb">
+      <DependentUpon>ProductListControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="CustomerControls\CustomerDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerControls\CustomerListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,11 +96,18 @@
       <DependentUpon>Application.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CustomerControls\CustomerDetailControl.xaml.vb">
+      <DependentUpon>CustomerDetailControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.vb">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ProductControls\ProductDetailControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductControls\ProductListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,21 +160,32 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdventureWorks.EntityLayer\AdventureWorks.EntityLayer.vbproj">
-      <Project>{c61ab759-d578-4b9d-80e1-7a21da4665f0}</Project>
+      <Project>{7fad0b6a-e6db-4001-8052-efb51583b903}</Project>
       <Name>AdventureWorks.EntityLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\AdventureWorks.ViewModelLayer\AdventureWorks.ViewModelLayer.vbproj">
-      <Project>{33e6b792-3bd5-4841-9439-3dfb1e6cccab}</Project>
+      <Project>{57c4e652-7980-45c7-8780-0e2060b31446}</Project>
       <Name>AdventureWorks.ViewModelLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common.Library\Common.Library.vbproj">
-      <Project>{ce1086ed-0074-48c2-9fd6-01497bcea348}</Project>
+      <Project>{37fc8c53-b045-43ef-a253-b234733d0eb9}</Project>
       <Name>Common.Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Xml\Customers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Xml\Products.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

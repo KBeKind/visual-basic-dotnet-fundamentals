@@ -1,8 +1,11 @@
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.ViewModelLayer.dll
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.ViewModelLayer.pdb
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.ViewModelLayer.xml
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.DataLayer.dll
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.EntityLayer.dll
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\Common.Library.dll
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.DataLayer.pdb
+C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.DataLayer.xml
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.EntityLayer.pdb
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\AdventureWorks.EntityLayer.xml
 C:\Users\kyler\Desktop\DOTNET-PRACTICE\VBFundamentals\AdventureWorks.ViewModelLayer\bin\Debug\Common.Library.pdb

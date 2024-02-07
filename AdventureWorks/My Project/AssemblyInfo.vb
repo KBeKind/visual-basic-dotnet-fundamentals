@@ -1,8 +1,8 @@
 ﻿Imports System
-Imports System.Globalization
 Imports System.Reflection
-Imports System.Resources
 Imports System.Runtime.InteropServices
+Imports System.Globalization
+Imports System.Resources
 Imports System.Windows
 
 ' General Information about an assembly is controlled through the following
@@ -15,7 +15,7 @@ Imports System.Windows
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("AdventureWorks")>
-<Assembly: AssemblyCopyright("Copyright ©  2024")>
+<Assembly: AssemblyCopyright("Copyright ©  2019")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: ComVisible(false)>
 
@@ -42,7 +42,7 @@ Imports System.Windows
 
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("206e669d-9cac-44a5-ada4-be8e8d4a3bec")>
+<Assembly: Guid("b4fd181a-8830-42af-ac20-55b5b0e1ebf7")>
 
 ' Version information for an assembly consists of the following four values:
 '

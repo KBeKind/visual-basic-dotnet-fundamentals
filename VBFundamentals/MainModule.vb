@@ -99,25 +99,46 @@ Module MainModule
         'prod.StandardCost = 250
         'prod.ListPrice = 500
 
-        Dim prod As New Product
+        'Dim prod As New Product
 
 
-        Console.WriteLine(prod.CalculateProfit())
+        'Console.WriteLine(prod.CalculateProfit())
 
-        Console.WriteLine(Product.CalculateTheProfit(900, 1400))
+        'Console.WriteLine(Product.CalculateTheProfit(900, 1400))
 
-        Console.WriteLine(prod.CreatedBy)
+        'Console.WriteLine(prod.CreatedBy)
 
-        Console.WriteLine()
+        'Console.WriteLine()
 
-        Dim cust As New Customer With {
-        .CustomerID = 1,
-        .CompanyName = "Beach computers",
-        .FirstName = "Dee",
-        .LastName = "Turman"
-        }
+        'Dim cust As New Customer With {
+        '.CustomerID = 1,
+        '.CompanyName = "Beach computers",
+        '.FirstName = "Dee",
+        '.LastName = "Turman"
+        '}
 
-        Console.WriteLine(cust.ToString())
+        'Console.WriteLine(cust.ToString())
+
+        'ARRAY
+        'Dim products As String() = {"Bike1", "Bike2", "Bike3"}
+
+        'Dim products(3) As String
+        'products(0) = "Bike1"
+        'products(1) = "Bike2"
+        'products(2) = "Bike3"
+
+        'Console.WriteLine(products.Length)
+
+        'ARRAYLIST
+        'Dim products As New ArrayList From {
+        '    "Bike1", "Bike2", "Bike3", 1, 3.35D, New Product With {.ProductNumber = "23"}
+        '}
+        'Console.WriteLine(products.Count)
+        'Console.WriteLine(DirectCast(products(0), Product).Name)
+
+
+
+
 
 
         Console.ReadKey()

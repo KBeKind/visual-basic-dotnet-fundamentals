@@ -1,5 +1,4 @@
 ﻿Public Class ViewModelBase
-    Inherits CommonBase
-
+  Inherits CommonBase
 
 End Class
