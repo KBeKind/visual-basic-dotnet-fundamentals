@@ -108,6 +108,8 @@ Module MainModule
 
         Console.WriteLine(prod.CreatedBy)
 
+        Console.WriteLine()
+
         Dim cust As New Customer With {
         .CustomerID = 1,
         .CompanyName = "Beach computers",
@@ -115,7 +117,7 @@ Module MainModule
         .LastName = "Turman"
         }
 
-        Console.WriteLine(cust.GetClassData())
+        Console.WriteLine(cust.ToString())
 
 
         Console.ReadKey()
