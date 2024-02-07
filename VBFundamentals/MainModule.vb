@@ -41,33 +41,33 @@ Module MainModule
         'IncrementListPrice()
         'IncrementListPrice()
 
-        Dim Name As String = "10 Speed Bike"
+        'Dim Name As String = "10 Speed Bike"
 
 
-        Console.WriteLine("built-in String methods")
-        Console.WriteLine(Name.Length)
-        Console.WriteLine(Name.IndexOf(" "))
-        Console.WriteLine(Name.LastIndexOf(" "))
-        Console.WriteLine(Name.EndsWith("e"))
-        Console.WriteLine(Name.Insert(9, "Mountain "))
-        Console.WriteLine(Name.Remove(0, 9))
-        Console.WriteLine(Name.Replace("10", "12"))
-        Console.WriteLine(Name.ToUpper())
-        Console.WriteLine(Name.ToLower())
-        Console.WriteLine()
+        'Console.WriteLine("built-in String methods")
+        'Console.WriteLine(Name.Length)
+        'Console.WriteLine(Name.IndexOf(" "))
+        'Console.WriteLine(Name.LastIndexOf(" "))
+        'Console.WriteLine(Name.EndsWith("e"))
+        'Console.WriteLine(Name.Insert(9, "Mountain "))
+        'Console.WriteLine(Name.Remove(0, 9))
+        'Console.WriteLine(Name.Replace("10", "12"))
+        'Console.WriteLine(Name.ToUpper())
+        'Console.WriteLine(Name.ToLower())
+        'Console.WriteLine()
 
-        Dim ListPrice As Decimal = ClassConstants.DEFAULT_LIST_PRICE
-        Console.WriteLine("built-in Numeric methods")
-        Console.WriteLine(ListPrice.Equals(999.99D))
-        Console.WriteLine(Decimal.MinValue)
-        Console.WriteLine(Decimal.MaxValue)
-        Console.WriteLine(Decimal.Ceiling(ListPrice))
-        Console.WriteLine(Decimal.Floor(ListPrice))
-        Decimal.TryParse("55.01", ListPrice)
-        Console.WriteLine(ListPrice)
-        Decimal.TryParse("Fifty-Five", ListPrice)
-        Console.WriteLine(ListPrice)
-        Console.WriteLine()
+        'Dim ListPrice As Decimal = ClassConstants.DEFAULT_LIST_PRICE
+        'Console.WriteLine("built-in Numeric methods")
+        'Console.WriteLine(ListPrice.Equals(999.99D))
+        'Console.WriteLine(Decimal.MinValue)
+        'Console.WriteLine(Decimal.MaxValue)
+        'Console.WriteLine(Decimal.Ceiling(ListPrice))
+        'Console.WriteLine(Decimal.Floor(ListPrice))
+        'Decimal.TryParse("55.01", ListPrice)
+        'Console.WriteLine(ListPrice)
+        'Decimal.TryParse("Fifty-Five", ListPrice)
+        'Console.WriteLine(ListPrice)
+        'Console.WriteLine()
 
         'Dim SellDate As DateTime = #1/1/2024 12:05:01 PM#
         'Console.WriteLine("built-in DateTime Methods")
@@ -85,18 +85,37 @@ Module MainModule
         'Console.WriteLine()
 
 
-        Dim prod As New Product
 
-        prod.SellStartDate = #1/1/2024#
-        Dim sellDate As DateTime
+
+        'prod.SellStartDate = #1/1/2024#
+        'Dim sellDate As DateTime
 
         'prod.CalculateSellEndDate(20, sellDate)
 
-        sellDate = prod.CalculateSellEndDate(20)
+        'sellDate = prod.CalculateSellEndDate(20)
 
-        Console.WriteLine(sellDate)
+        'Console.WriteLine(sellDate)
+
+        'prod.StandardCost = 250
+        'prod.ListPrice = 500
+
+        Dim prod As New Product
 
 
+        Console.WriteLine(prod.CalculateProfit())
+
+        Console.WriteLine(Product.CalculateTheProfit(900, 1400))
+
+        Console.WriteLine(prod.CreatedBy)
+
+        Dim cust As New Customer With {
+        .CustomerID = 1,
+        .CompanyName = "Beach computers",
+        .FirstName = "Dee",
+        .LastName = "Turman"
+        }
+
+        Console.WriteLine(cust.GetClassData())
 
 
         Console.ReadKey()
@@ -110,6 +129,8 @@ Module MainModule
 
         'Console.WriteLine(ListPrice)
     End Sub
+
+
 
 
 End Module

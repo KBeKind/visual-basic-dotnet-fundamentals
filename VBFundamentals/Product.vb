@@ -1,4 +1,12 @@
 ﻿Public Class Product
+    Inherits CommonBase
+
+    Sub New()
+        StandardCost = 500
+        ListPrice = 900
+        SellStartDate = DateTime.Now
+    End Sub
+
 
     'Private _IsActive As Boolean
     'Public Property IsActive() As Boolean
@@ -30,7 +38,7 @@
     '    End Set
     'End Property
 
-
+    Public Property ListPrice As Decimal
     Public Property IsActive As Boolean
     Public Property Name As String
     Public Property ProductNumber As String
@@ -43,7 +51,7 @@
 
     Public Property SellStartDate As DateTime
     Public Property SellEndDate As DateTime
-
+    Public Property StandardCost As Decimal
 
     'Sub CalculateSellEndDate(ByVal days As Integer)
     '    SellEndDate = SellStartDate.AddDays(days)
@@ -58,5 +66,30 @@
         SellEndDate = SellStartDate.AddDays(days)
         Return SellEndDate
     End Function
+
+    'Function CalculateProfit(Optional ByVal newCost As Decimal = 0) As Decimal
+    '    If newCost <> 0 Then
+    '        StandardCost = newCost
+    '    End If
+    '    Return ListPrice - StandardCost
+    'End Function
+
+    Overloads Function CalculateProfit() As Decimal
+        Return CalculateProfit(StandardCost)
+    End Function
+
+    Overloads Function CalculateProfit(ByVal newCost As Decimal) As Decimal
+        If newCost <> 0 Then
+            StandardCost = newCost
+        End If
+        Return ListPrice - StandardCost
+    End Function
+
+
+    Shared Function CalculateTheProfit(ByVal cost As Decimal, ByVal price As Decimal) As Decimal
+        Return price - cost
+    End Function
+
+
 
 End Class
