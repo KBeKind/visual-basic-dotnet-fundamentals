@@ -38,20 +38,18 @@
     '    End Set
     'End Property
 
-    Public Property ListPrice As Decimal
-    Public Property IsActive As Boolean
+
+    Public Property ProductID As Integer
     Public Property Name As String
     Public Property ProductNumber As String
-
-    Public ReadOnly Property NameAndNumber() As String
-        Get
-            Return Name + "-" + ProductNumber
-        End Get
-    End Property
-
+    Public Property Color As String
+    Public Property Size As String
+    Public Property Weight As Decimal
+    Public Property StandardCost As Decimal
+    Public Property ListPrice As Decimal
     Public Property SellStartDate As DateTime
     Public Property SellEndDate As DateTime
-    Public Property StandardCost As Decimal
+
 
     'Sub CalculateSellEndDate(ByVal days As Integer)
     '    SellEndDate = SellStartDate.AddDays(days)
@@ -90,6 +88,10 @@
         Return price - cost
     End Function
 
+
+    Public Overrides Function ToString() As String
+        Return Name + " (" + ProductNumber + ")"
+    End Function
 
 
 End Class
